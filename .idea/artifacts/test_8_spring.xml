@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="test-8-spring">
+    <output-path>$PROJECT_DIR$/out/artifacts/test_8_spring</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+    </root>
+  </artifact>
+</component>

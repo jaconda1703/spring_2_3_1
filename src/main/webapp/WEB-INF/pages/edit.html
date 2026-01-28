@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование</title>
+</head>
+<body>
+
+<h2>Редактировать пользователя</h2>
+
+<form th:action="@{/users/{id}/edit(id=${user.id})}" method="post">
+    <p>ID: <span th:text="${user.id}"></span></p>
+
+    <input type="text" name="name" th:value="${user.name}" placeholder="Имя">
+    <input type="text" name="lastname" th:value="${user.lastname}" placeholder="Фамилия">
+    <input type="number" name="age" th:value="${user.age}" placeholder="Возраст">
+
+    <button type="submit">Сохранить</button>
+</form>
+
+<a th:href="@{/users}">Назад</a>
+
+</body>
+</html>
