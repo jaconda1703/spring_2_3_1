@@ -8,6 +8,7 @@ import web.hibernate.model.User;
 import java.util.List;
 
 
+@Transactional
 @Service
 public class UserService {
 
@@ -17,12 +18,10 @@ public class UserService {
         this.userDao = userDao;
     }
 
-    @Transactional
     public void save(User user){
         userDao.save(user);
     }
 
-    @Transactional
     public void delete(Long id){
         userDao.delete(id);
     }
@@ -37,7 +36,6 @@ public class UserService {
         return userDao.findAll();
     }
 
-    @Transactional
     public void update(User user){
         userDao.update(user);
     }
